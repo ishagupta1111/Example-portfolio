@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>portfolio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <style type="text/css">
+    	@media only screen and (max-width: 768px) {
+    		.portfolio-items{
+    			display: grid;
+    			grid-template-columns: 80%;
+    			justify-content: center;
+    		}
+    		.portfolio-item{
+    			text-align: center;
+    		}
+    		.background-image img{
+    			width: 80%;
+    			height: 250px;
+    		}
+    		.topright{
+    			top: 3%;
+                right: 20%;
+                font-size: 110%;
+    		}
+    		.image-text{
+    			padding-right: 25%;
+    		}
+    	}
+}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="nav">
+			<div class="left_">
+				<div class="nav-link">
+					<a href="index.html">HOME</a>
+				</div>
+
+				<div class="nav-link">
+					<a href="work.html">WORK</a>
+				</div>
+				<div class="nav-link">
+					<a href="bio.html">BIO</a>
+				</div>
+				<div class="nav-link">
+					<a href="contact.html">CONTACT</a>
+				</div>
+			</div>
+
+			<div class="right_">
+				<div class="brand-name">
+					<div>JOHN HYDE</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+		<div class="content">
+			<div class="portfolio-items">
+				<div class="portfolio-item">
+					<div class="background-image" >
+						<img src="images/folio1.jpg">
+					</div>
+
+					<div class="image-text">
+							<div class="topright">Male Indian peafowl</div>
+						<div class="subtitle">
+							  Blue peafowl(Pavo, cristatus) flying in real nature in Thailand
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-item">
+					<div class="background-image" >
+						<img src="images/folio2.jpg">
+					</div>
+
+					<div class="image-text">
+							<div class="topright">Cissa chinensis</div>
+						<div class="subtitle">
+							 Deep green Common green magpie in thailand forest.
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-item">
+					<div class="background-image" >
+						<img src="images/folio3.jpg">
+					</div>
+
+					<div class="image-text">
+							<div class="topright">Buceros bicornis</div>
+						<div class="subtitle">
+							Close up view Great hornbill in nature at Khaoyai national park.
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-item">
+					<div class="background-image">
+						<img src="images/folio4.jpg">
+					</div>
+
+					<div class="image-text">
+							<div class="topright">Athene brama</div>
+						<div class="subtitle">
+							Close up of Spotted owlet looking at us in nature at Suanluang R.9
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-item">
+					<div class="background-image" >
+						<img src="images/folio5.jpg">
+					</div>
+
+					<div class="image-text">
+							<div class="topright">Physignathus cocincinus</div>
+						<div class="subtitle">
+							Chinese water dragon on the tree in thailand.
+						</div>
+					</div>
+				</div>
+
+				<div class="portfolio-item">
+					<div class="background-image" >
+						<img src="images/folio6.jpg">
+					</div>
+
+					<div class="image-text">
+							<div class="topright">Hystrix brachyura</div>
+						<div class="subtitle">
+						    Full body side view of Nocturnal animals Malayan porcupine in nature at Kaengkrajarn national park
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+</body> 
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
+</html>
